@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".authentication.LoginActivity"
+    android:id="@+id/rl_select_hashtag">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/rounded_corner_btn_circle">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_hash"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/r1"
+                android:layout_marginTop="7dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="7dp">
+
+                <TextView
+                    android:id="@+id/tv_tag_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:text="#COVID-19"/>
+
+                <TextView
+                    android:id="@+id/tv_tag_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:text="56,750 件"
+                    android:layout_below="@id/tv_tag_heading"/>
+
+                <TextView
+                    android:id="@+id/tv_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_check"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSiftGreyDark"
+                android:layout_below="@+id/r1"
+                />
+
+        </RelativeLayout>
+
+</RelativeLayout>

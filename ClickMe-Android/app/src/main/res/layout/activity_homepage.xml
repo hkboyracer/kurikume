@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.LoginActivity"
+    >
+
+    <include
+        android:id="@+id/toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header_homepage"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp">
+
+        <ImageView
+            android:id="@+id/iv_paw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_paw"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="初めての投稿をしましょう！"
+            android:layout_below="@id/iv_paw"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_user_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="あなたの好きなもの、気になっていること、いましていること。あなたの“好き”を共有しちゃいましょう！"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tv_user_name"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_contactus_confirmation"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_user_"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/btn_go_to_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="初めての“好き”を共有する"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

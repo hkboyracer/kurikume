@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_text_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ホームページ URL"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSiftGreyDark"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_train_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/ll_text_fields">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="ホームページ URL"/>
+
+                <EditText
+                    android:id="@+id/edt_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_corner_bg_grey_searchbar"
+                    android:paddingLeft="20dp"
+                    android:textSize="10sp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:hint="username@sample.com"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登録されたU R Lはプロフィール画面上に表示され、他のユーザーも閲覧できるようになります。非表示にしたい場合は、無記入にしてください。"
+                android:layout_below="@+id/ll_train_level"
+                android:layout_margin="20dp"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="保存する"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_1"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_corner_btn_login"/>
+
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

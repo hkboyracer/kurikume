@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_hashtag_and_trends">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:background="@color/colorOffWhite"
+        >
+
+        <TextView
+            android:id="@+id/tv_trends"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="トレンド"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_btn_categories"
+            android:textColor="@color/colorAccent"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

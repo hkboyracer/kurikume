@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_text_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="お支払い設定"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSiftGreyDark"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/ll_text_fields">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="アカウントクレジットの残高"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="1000JPY"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="10sp"
+                    android:text="現在このアカウントで使用可能なクレジットを表示しています。"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSiftGreyDark"
+                    android:layout_below="@+id/tv_1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_train_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/ll_one">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="クレジットを追加する"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="10sp"
+                    android:text="ご希望の金額を入力してください。最低金額は500円となります。"/>
+
+
+                <EditText
+                    android:id="@+id/edt_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_corner_bg_grey_searchbar"
+                    android:paddingLeft="20dp"
+                    android:textSize="10sp"
+                    android:paddingRight="20dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:hint="E.g.) 500JPY"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ご課金いただいたクレジットは現在ご使用中のこのアカウントのみ、ご利用可能となります。他のアカウントへ送金することはできません。下のボタンをクリックいただいた後、Paypalのお支払い画面へ移行します。"
+                android:layout_below="@+id/ll_train_level"
+                android:textColor="@color/red_orange_color_picker"
+                android:layout_margin="20dp"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="クレジットを追加する"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_1"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_corner_btn_login"/>
+
+            <View
+                android:id="@+id/view_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSiftGreyDark"
+                android:layout_below="@+id/btn_login"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:text="クレジット活用履歴"
+                android:layout_below="@+id/view_bottom"/>
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="10sp"
+                android:text="24/01/2020 - 500JPY 追加"
+                android:layout_below="@+id/t"/>
+
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="10sp"
+                android:text="20/01/2020 - 500JPY 追加"
+                android:layout_below="@+id/t1"/>
+
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="10sp"
+                android:text="18/01/2020 - 500JPY 使用"
+                android:layout_below="@+id/t2"/>
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="10sp"
+                android:text="17/01/2020 - 500JPY 追加"
+                android:layout_below="@+id/t3"/>
+
+
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

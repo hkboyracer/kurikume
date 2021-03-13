@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/iv_selected_defect"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_user"
+            />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorSiftGreyDark"
+            android:text="User Name1"/>
+
+        <TextView
+            android:id="@+id/tv_user_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:text=" @test1"
+            android:layout_below="@id/tv_tag_heading"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <include
+        android:id="@+id/toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" />
+
+        <ScrollView
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_header"
+            android:layout_above="@id/toolbar_footer">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新規登録・ログイン"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="当サイトにコンテンツをアップロードする際、アカウントを作成いただいた上でご利用が可能となります。下記のフォームからご登録、またはログインをお願いいたします。"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tv_1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="＊ご登録いただく前に必ず一読ください＊"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tv_2"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/red_color_picker"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="@string/signup_str_browse_posts"
+                        android:textAlignment="textStart"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tv_3"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/red_color_picker"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_corner_bg_login"
+            android:layout_below="@+id/rl_1">
+
+            <include
+                android:id="@+id/toolbar_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_header_signup" />
+
+        <RelativeLayout
+            android:id="@+id/layout_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_btn_edittext"
+            android:layout_below="@id/toolbar_header"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <EditText
+                android:id="@+id/edt_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="20dp"
+                android:textSize="14sp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/colorAccent"
+                android:hint="メールアドレス "
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/layout_fullname"
+            android:background="@drawable/rounded_corner_btn_edittext">
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="20dp"
+                android:textSize="14sp"
+                android:paddingRight="20dp"
+                android:hint=" くりっく ME ID"
+                android:textColorHint="@color/colorAccent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_btn_edittext">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint=" パスワード "
+                android:textSize="14sp"
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColorHint="@color/colorAccent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_phone_no"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_btn_edittext">
+
+            <EditText
+                android:id="@+id/edt_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:hint="パスワード（再確認） "
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:textColorHint="@color/colorAccent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_referral_code"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_phone_no"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_btn_edittext">
+
+            <EditText
+                android:id="@+id/edt_referral_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="14sp"
+                android:hint="生年月日"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_gender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/layout_referral_code"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_btn_edittext">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性別"
+                        android:checked="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorSiftGreyDark"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_men"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="男性"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorSiftGreyDark"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_women"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女性"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorSiftGreyDark"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="その他"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorSiftGreyDark"
+                        />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/layout_gender"
+                >
+
+                <CheckBox
+                    android:id="@+id/cb_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="利用規約"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="及び、"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" プライバシーポリシー"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="に同意します。"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="92dp"
+                android:layout_height="40dp"
+                android:text="送信"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="10sp"
+                android:layout_below="@id/ll_terms"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorSiftGreyDark"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_corner_btn_signup"/>
+
+            <TextView
+                android:id="@+id/tv_bottom_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="もしくは"
+                android:layout_below="@id/btn_signup"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_bottom_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="お持ちのアカウントで続行する"
+                android:layout_below="@id/tv_bottom_1"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_bottom_2"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_google"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_twitter"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_facebook"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+        </RelativeLayout>
+
+        </ScrollView>
+
+    <include
+        android:id="@+id/toolbar_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_footer"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

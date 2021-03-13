@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_searched_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorLightGrey"
+        android:layout_below="@id/toolbar_header"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="くりっく ME: Searched Keyword"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_filter"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corner_bg_filters">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="sample text"
+                android:padding="2dp"
+                android:layout_marginLeft="5dp"/>
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_toRightOf="@id/tv_1"
+                android:scaleType="fitXY"
+                android:padding="2dp"
+                android:background="@drawable/ic_action_down"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_searchbar_for_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/rl_searched_keyword"
+        android:background="@drawable/rounded_corner_bg_grey_searchbar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_search_edt_for_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/rl_search_iv_for_toolbar">
+
+            <EditText
+                android:id="@+id/edt_search_for_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@color/colorLightGrey"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_search_iv_for_toolbar"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_corner_bg_green_search">
+
+            <ImageView
+                android:id="@+id/iv_search_for_toolbar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_search"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_searchbar_for_toolbar"
+        >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rl_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/move_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/ic_move_left"
+                android:layout_toLeftOf="@+id/slider"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <ImageView
+                android:id="@+id/slider"
+                android:layout_width="0dp"
+                android:layout_weight="9.5"
+                android:layout_height="180dp"
+                android:background="@drawable/banner_3"
+                />
+
+            <ImageView
+                android:id="@+id/move_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/ic_move_right"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_menu_items"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_searchbar_with_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_slider">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="いま、気になっていることを検索"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="インスタグラムにログインなしで検索できる！"
+            android:layout_below="@id/t1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/t2"
+            android:background="@drawable/rounded_corner_bg_grey_searchbar">
+
+            <RelativeLayout
+                android:id="@+id/rl_search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/rl_search_iv">
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="検索"
+                    android:backgroundTint="@color/colorLightGrey"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_search_iv"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rounded_corner_bg_green_search">
+
+                <ImageView
+                    android:id="@+id/iv_train_statusbar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_search"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_recyclerview_trends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_searchbar_with_text"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_para_one_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_about_us_para_one_heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="23sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_para_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_about_us_para_one"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_para_one_heading"
+            android:layout_marginLeft="20dp"
+            android:textSize="10sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_para_two_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_about_us_para_two_heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSiftGreyDark"
+            android:layout_below="@id/tv_para_one"/>
+
+        <TextView
+            android:id="@+id/tv_para_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_about_us_para_two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="10sp"
+            android:layout_below="@id/tv_para_two_heading"/>
+
+    </RelativeLayout>
+
+        <include
+            android:id="@+id/toolbar_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_footer"
+            android:layout_below="@id/rl_recyclerview_trends"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
